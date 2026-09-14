@@ -1,0 +1,77 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Boton de accion flotante</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-text class="intro">
+    <p>
+      Los Fabs son elementos contenedores que contienen uno o más botones Fab . Deben ubicarse en una posición fija que no se desplace con el contenido. Cada Fab debe tener un botón Fab principal. También pueden contener una o más listas Fab con botones relacionados que se muestran al hacer clic en el botón Fab principal.</p>
+  </ion-text>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Uso básico</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="contenido">
+      <ion-fab>
+  <ion-fab-button>
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>  
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>posicionamiento</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="contenido2">
+        <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="chevron-up-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button>
+        <ion-icon name="document"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="color-palette"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="globe"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Tamaño de los botones </ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="contenido3">
+        <ion-fab>
+  <ion-fab-button size="small">
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list side="end">
+    <ion-fab-button>
+      <ion-icon name="document"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button>
+      <ion-icon name="color-palette"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button>
+      <ion-icon name="globe"></ion-icon>
+    </ion-fab-button>
+  </ion-fab-list>
+</ion-fab>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button routerLink="/inicio" class="volver-btn">
+    Volver
+  </ion-button>
+</ion-content>

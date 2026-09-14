@@ -1,0 +1,157 @@
+```html
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Calculadora
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <!-- CALCULADORA -->
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title>
+        Calculadora
+      </ion-card-title>
+    </ion-card-header>
+
+
+    <ion-card-content>
+
+      <!-- Número 1 -->
+      <ion-item>
+        <ion-input
+          label="Número 1"
+          labelPlacement="floating"
+          type="number"
+          [(ngModel)]="num1"
+          placeholder="Ingrese un número">
+        </ion-input>
+      </ion-item>
+
+
+      <!-- Operador -->
+      <ion-item>
+        <ion-select
+          label="Operación"
+          labelPlacement="floating"
+          [(ngModel)]="operador">
+
+          <ion-select-option value="+">
+            Suma (+)
+          </ion-select-option>
+
+          <ion-select-option value="-">
+            Resta (-)
+          </ion-select-option>
+
+          <ion-select-option value="*">
+            Multiplicación (*)
+          </ion-select-option>
+
+          <ion-select-option value="/">
+            División (/)
+          </ion-select-option>
+
+        </ion-select>
+      </ion-item>
+
+
+      <!-- Número 2 -->
+      <ion-item>
+        <ion-input
+          label="Número 2"
+          labelPlacement="floating"
+          type="number"
+          [(ngModel)]="num2"
+          placeholder="Ingrese un número">
+        </ion-input>
+      </ion-item>
+
+
+      <!-- Botón calcular -->
+      <ion-button
+        expand="block"
+        (click)="calcular()">
+
+        Calcular
+
+      </ion-button>
+
+    </ion-card-content>
+
+  </ion-card>
+
+
+  <!-- RESULTADO -->
+  <ion-card *ngIf="resultado !== null">
+
+    <ion-card-header>
+      <ion-card-title>
+        Resultado
+      </ion-card-title>
+    </ion-card-header>
+
+
+    <ion-card-content>
+
+      <h2 class="ion-text-center">
+        {{ resultado }}
+      </h2>
+
+    </ion-card-content>
+
+  </ion-card>
+
+
+  <!-- HISTORIAL -->
+  <ion-card *ngIf="historial.length > 0">
+
+    <ion-card-header>
+      <ion-card-title>
+        Historial
+      </ion-card-title>
+    </ion-card-header>
+
+
+    <ion-card-content>
+
+      <ion-list>
+
+        <ion-item *ngFor="let op of historial">
+
+          <ion-label>
+            {{ op.num1 }}
+            {{ op.operador }}
+            {{ op.num2 }}
+            =
+            <strong>
+              {{ op.resultado }}
+            </strong>
+          </ion-label>
+
+        </ion-item>
+
+      </ion-list>
+
+
+      <!-- Limpiar historial -->
+      <ion-button
+        expand="block"
+        color="danger"
+        (click)="limpiarHistorial()">
+
+        Limpiar historial
+
+      </ion-button>
+
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>
+```

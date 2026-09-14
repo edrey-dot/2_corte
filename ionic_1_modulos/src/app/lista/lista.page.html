@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Lista</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-text class="intro"> <p>
+      Las listas se componen de varias filas de elementos que pueden contener texto, botones, interruptores, iconos, miniaturas y mucho más. Generalmente, las listas contienen elementos con contenido de datos similar, como imágenes y texto.
+
+Las listas admiten varias interacciones, como deslizar elementos para ver opciones, arrastrar para reordenar elementos dentro de la lista y eliminar elementos.</p>
+  </ion-text>
+  <ion-card>
+      <ion-card-header>
+        <ion-card-title>uso basico</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+  <ion-list-header>
+    <ion-label>juegos de video</ion-label>
+  </ion-list-header>
+  <ion-item>
+    <ion-label>free fire</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>blook strie</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Roblox</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>fortine</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Call of duty</ion-label>
+  </ion-item>
+</ion-list>
+      </ion-card-content>
+    </ion-card>
+
+  <ion-card>
+      <ion-card-header>
+        <ion-card-title>lista de lineas</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list lines="none">
+  <ion-item>
+    <ion-label>ionic</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Angular</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>React</ion-label>
+  </ion-item>
+</ion-list>
+      </ion-card-content>
+    </ion-card>
+
+  <ion-button routerLink="/inicio" class="volver-btn">
+    Volver
+  </ion-button>
+</ion-content>

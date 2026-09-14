@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Casilla</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-text class="intro"> <p>
+      Las casillas de verificación permiten seleccionar varias opciones de un conjunto. Aparecen marcadas (con una marca) cuando están activadas. Al hacer clic en una casilla de verificación, se activa o desactiva la checkedpropiedad. También se pueden marcar mediante programación configurando la checkedpropiedad. </p>
+  </ion-text>
+  <ion-card>
+      <ion-card-header>
+        <ion-card-title>uso basico</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-checkbox>I agree to the terms and conditions</ion-checkbox>
+      </ion-card-content>
+  </ion-card>
+  <ion-card>
+      <ion-card-header>
+        <ion-card-title>Enlaces dentro de las etiquetas</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-checkbox>I agree to the <a href="https://i.pinimg.com/236x/fd/55/19/fd5519f2c9c58a587dba95543df9ac6b.jpg?nii=t" (click)="$event.stopPropagation()">terms and conditions</a></ion-checkbox>
+      </ion-card-content>
+  </ion-card>  
+
+  <ion-card>
+      <ion-card-header>
+        <ion-card-title>Texto de ayuda y error</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <ion-checkbox
+    formControlName="agree"
+    helperText="Agree to the terms before continuing"
+    errorText="You must agree to the terms to continue"
+  >
+    I agree to the terms and conditions
+  </ion-checkbox>
+
+  <br />
+
+  <ion-button type="submit" size="small">Submit</ion-button>
+</form>
+      </ion-card-content>
+  </ion-card>
+
+  <ion-button routerLink="/inicio" class="volver-btn">
+    Volver
+  </ion-button>
+</ion-content>

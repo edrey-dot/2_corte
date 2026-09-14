@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Iconos </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-text class="intro"> <p>
+     Icon es un contenedor universal para mostrar iconos. Si bien Ionicons viene incluido por defecto en todas las aplicaciones de Ionic Framework, este componente puede mostrar iconos Ionicons, SVG personalizados, bibliotecas de iconos basadas en fuentes y otros sistemas de iconos. Proporciona un estilo y un tamaño uniformes, independientemente del origen del icono. </p>
+  </ion-text>
+
+  <ion-card>
+      <ion-card-header>
+        <ion-card-title>uso basico</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="row">
+  <ion-button size="small" fill="outline">
+    <ion-icon slot="start" name="home"></ion-icon>
+    Home
+  </ion-button>
+  <ion-button size="small" fill="outline" color="tertiary">
+    <ion-icon slot="start" name="star"></ion-icon>
+    Save
+  </ion-button>
+  <ion-button size="small" fill="outline" color="danger">
+    <ion-icon slot="start" name="trash"></ion-icon>
+    Trash
+  </ion-button>
+</div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>SVG personalizado</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+      <div class="row">
+  <ion-icon src="https://ionicframework.com/docs/img/demos/home.svg" color="primary"></ion-icon>
+  <ion-icon src="https://ionicframework.com/docs/img/demos/star.svg" color="tertiary"></ion-icon>
+  <ion-icon src="https://ionicframework.com/docs/img/demos/trash.svg" color="danger"></ion-icon>
+</div>
+
+      </ion-card-content>
+    </ion-card>
+
+  <ion-button routerLink="/inicio" class="volver-btn">
+    Volver
+  </ion-button>
+</ion-content>

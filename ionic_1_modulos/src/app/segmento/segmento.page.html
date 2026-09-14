@@ -1,0 +1,80 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Segmento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-text class="intro"> <p>
+      Los segmentos muestran un grupo de botones relacionados, a veces denominados controles segmentados, en una fila horizontal. Pueden aparecer dentro de una barra de herramientas o en el contenido principal.
+
+Su funcionamiento es similar al de las pestañas: al seleccionar una, se deseleccionan todas las demás. Los segmentos son útiles para alternar entre diferentes vistas dentro del contenido. Se deben usar pestañas en lugar de segmentos cuando se desea navegar entre páginas al hacer clic en un control.</p>
+  </ion-text>
+
+  <ion-card>
+      <ion-card-header>
+        <ion-card-title>uso basico</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-segment value="default">
+  <ion-segment-button value="default">
+    <ion-label>on</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="segment">
+    <ion-label>off</ion-label>
+  </ion-segment-button>
+</ion-segment>
+
+      </ion-card-content>
+  </ion-card>
+
+
+
+
+  <ion-card>
+      <ion-card-header>
+        <ion-card-title>Segmento en barra de tareas</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+          <ion-segment value="custom">
+  <ion-segment-button class="css" value="custom">
+    <ion-label>Custom</ion-label>
+  </ion-segment-button>
+  <ion-segment-button class="css" value="segment">
+    <ion-label>Segment</ion-label>
+  </ion-segment-button>
+  <ion-segment-button class="css" value="buttons">
+    <ion-label>Buttons</ion-label>
+  </ion-segment-button>
+</ion-segment>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Segmento deslizable</ion-card-title>
+      </ion-card-header>
+       <ion-card-content>
+      <ion-segment>
+        <ion-segment-button value="first" content-id="first">
+          <ion-label>Primero</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="second" content-id="second">
+          <ion-label>Segundo</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="third" content-id="third">
+          <ion-label>Tercero</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+      <ion-segment-view>
+        <ion-segment-content class="segemento_titulo_color" id="first">Primero</ion-segment-content>
+        <ion-segment-content class="segemento_titulo_color" id="second">Segundo</ion-segment-content>
+        <ion-segment-content class="segemento_titulo_color" id="third">Tercero</ion-segment-content>
+      </ion-segment-view>
+    </ion-card-content>
+    </ion-card>
+
+  <ion-button routerLink="/inicio" class="volver-btn">
+    Volver
+  </ion-button>
+</ion-content>

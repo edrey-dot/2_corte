@@ -1,0 +1,48 @@
+.volver-btn {
+  display: block;
+  margin: 10px 10px 10px auto; // lo empuja hacia la derecha
+  --border-radius: 12px;
+  font-weight: 600;
+  max-width: 140px;
+}
+ion-card {
+  margin: 16px;
+}
+
+ion-card-title {
+  font-size: 20px;
+}
+.intro {
+  display: block;
+  padding: 16px 20px;
+
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    text-align: justify;
+  }
+}
+
+ion-accordion {
+  margin: 0 auto;
+}
+
+ion-accordion.accordion-expanding,
+ion-accordion.accordion-expanded {
+  width: calc(100% - 32px);
+
+  margin: 16px auto;
+}
+
+ion-accordion.accordion-collapsing ion-item[slot='header'],
+ion-accordion.accordion-collapsed ion-item[slot='header'] {
+  --background: var(--ion-color-light);
+  --color: var(--ion-color-light-contrast);
+}
+
+ion-accordion.accordion-expanding ion-item[slot='header'],
+ion-accordion.accordion-expanded ion-item[slot='header'] {
+  --background: var(--ion-color-primary);
+  --color: var(--ion-color-primary-contrast);
+}

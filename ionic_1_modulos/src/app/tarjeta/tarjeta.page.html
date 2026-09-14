@@ -1,0 +1,71 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Tarjeta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+      <ion-text class="intro"> <p>
+      Las tarjetas son contenedores que muestran contenido como texto, imágenes, botones y listas. Una tarjeta puede ser un componente único, pero generalmente se compone de un encabezado, un título, un subtítulo y contenido. Para adaptarse a esta estructura, las tarjetas se dividen en varios componentes: encabezado , título , subtítulo y contenido . </p>
+  </ion-text>
+  <ion-card>
+      <ion-card-header>
+        <ion-card-title>Tarjetas de memoria</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-card>
+  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+  <ion-card-header>
+    <ion-card-title>Card Title</ion-card-title>
+    <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    Here's a small text description for the card content. Nothing more, nothing less.
+  </ion-card-content>
+</ion-card>
+      </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+      <ion-card-header>
+        <ion-card-title>uso basico</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-card color="primary">
+  <ion-card-header>
+    <ion-card-title>Card Title</ion-card-title>
+    <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    Here's a small text description for the card content. Nothing more, nothing less.
+  </ion-card-content>
+</ion-card>
+      </ion-card-content>
+  </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Propiedasdes persolanizadas con css</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-card class=" contenido_tarjeta_3">
+  <ion-card-header>
+    <ion-card-title class="titulo_tarjeta_3">Card Title</ion-card-title>
+    <ion-card-subtitle class="subtitulo_tarjeta_3">Card Subtitle</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    Here's a small text description for the card content. Nothing more, nothing less.
+  </ion-card-content>
+</ion-card>
+      </ion-card-content>
+  </ion-card>
+
+    
+
+  <ion-button routerLink="/inicio" class="volver-btn">
+    Volver
+  </ion-button>
+</ion-content>

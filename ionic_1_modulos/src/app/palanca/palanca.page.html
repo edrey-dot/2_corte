@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Palanca</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-text class="intro"> <p>
+      Los interruptores permiten cambiar el estado de una opción específica. Se pueden activar o desactivar presionándolos o deslizándolos. También se pueden verificar mediante programación configurando la checkedpropiedad correspondiente.</p>
+  </ion-text>
+
+  <ion-card>
+      <ion-card-header>
+        <ion-card-title>uso basico</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-toggle [enableOnOffLabels]="true">Enable Notifications</ion-toggle>
+      </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+      <ion-card-header>
+        <ion-card-title>Textod de ayuda y error</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <form [formGroup]="myForm">
+  <ion-toggle
+    formControlName="wifi"
+    helperText="Buscado redes para conectarse"
+    errorText="interntet apagado"
+    justify="space-between"
+    (ionChange)="onChange()"
+  >
+    Wi-Fi
+  </ion-toggle>
+</form>
+      </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+      <ion-card-header>
+        <ion-card-title>Tematizacion</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-toggle aria-label="Primary toggle" color="primary" [checked]="true"></ion-toggle>
+<ion-toggle aria-label="Secondary toggle" color="secondary" [checked]="true"></ion-toggle>
+<ion-toggle aria-label="Tertiary toggle" color="tertiary" [checked]="true"></ion-toggle>
+<ion-toggle aria-label="Success toggle" color="success" [checked]="true"></ion-toggle>
+<ion-toggle aria-label="Warning toggle" color="warning" [checked]="true"></ion-toggle>
+<ion-toggle aria-label="Danger toggle" color="danger" [checked]="true"></ion-toggle>
+<ion-toggle aria-label="Light toggle" color="light" [checked]="true"></ion-toggle>
+<ion-toggle aria-label="Medium toggle" color="medium" [checked]="true"></ion-toggle>
+<ion-toggle aria-label="Dark toggle" color="dark" [checked]="true"></ion-toggle>
+      </ion-card-content>
+  </ion-card>
+
+  <ion-button routerLink="/inicio" class="volver-btn">
+    Volver
+  </ion-button>
+</ion-content>

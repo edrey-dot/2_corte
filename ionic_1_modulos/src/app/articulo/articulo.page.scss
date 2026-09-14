@@ -1,0 +1,28 @@
+.volver-btn {
+  display: block;
+  margin: 10px 10px 10px auto; // lo empuja hacia la derecha
+  --border-radius: 12px;
+  font-weight: 600;
+  max-width: 140px;
+}
+ion-card {
+  margin: 16px;
+}
+
+ion-card-title {
+  font-size: 20px;
+}
+.intro {
+  display: block;
+  padding: 16px 20px;
+
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    text-align: justify;
+  }
+}
+// ion-note {
+//   display: block;
+// }

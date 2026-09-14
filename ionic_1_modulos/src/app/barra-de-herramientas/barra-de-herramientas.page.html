@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Barra ded herramientas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-text class="intro">
+    <p>
+    Las barras de herramientas suelen ubicarse encima o debajo del contenido y proporcionan contenido y acciones para la pantalla actual. Cuando se colocan dentro del contenido , las barras de herramientas se desplazan junto con este.
+
+Las barras de herramientas pueden contener varios componentes diferentes, como títulos, botones, iconos, botones de retroceso, botones de menú, barras de búsqueda, segmentos, barras de progreso y más.
+
+Uso básico</p>
+  </ion-text>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Uso básico</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Header Toolbar</ion-title>
+  </ion-toolbar>
+</ion-header>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Barras de progreso en las barras de herramientas</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-header>
+  <ion-toolbar>
+    <ion-title>Toolbar</ion-title>
+    <ion-progress-bar type="indeterminate"></ion-progress-bar>
+  </ion-toolbar>
+</ion-header>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button routerLink="/inicio" class="volver-btn">
+    Volver
+  </ion-button>
+</ion-content>

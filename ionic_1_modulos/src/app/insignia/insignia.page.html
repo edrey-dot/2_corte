@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Insignia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+      <ion-text class="intro"> <p>
+      Las insignias son elementos de bloque en línea que suelen aparecer cerca de otro elemento. Normalmente contienen un número u otros caracteres. Se pueden usar para notificar que hay elementos adicionales asociados a un elemento e indicar cuántos hay. Las insignias se ocultan si no se les pasa ningún contenido. </p>
+  </ion-text>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Uso basico</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+    <ion-badge slot="end">+99</ion-badge>
+    <ion-label>Facebook</ion-label>
+  </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Insignias en botones de pestañas</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-tab-bar color="light">
+  <ion-tab-button tab="1">
+    <ion-icon name="heart"></ion-icon>
+    <ion-label>Favorites</ion-label>
+    <ion-badge color="danger"></ion-badge>
+  </ion-tab-button>
+
+  <ion-tab-button tab="2">
+    <ion-icon name="musical-note"></ion-icon>
+    <ion-label>Music</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="3">
+    <ion-icon name="calendar"></ion-icon>
+    <ion-label>Calendar</ion-label>
+    <ion-badge color="danger">47</ion-badge>
+  </ion-tab-button>
+</ion-tab-bar>
+</ion-card-content>
+  </ion-card>
+
+
+
+
+
+
+  <ion-button routerLink="/inicio" class="volver-btn">
+    Volver
+  </ion-button>
+
+</ion-content>

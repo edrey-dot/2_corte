@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Fecha y hora</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-text class="intro"> <p>
+      Los controles Datetime presentan una interfaz de calendario y una rueda de tiempo, lo que facilita a los usuarios la selección de fechas y horas. Los controles Datetime son similares a los inputelementos nativos de datetime-local, sin embargo, el componente Datetime de Ionic Framework facilita la visualización de la fecha y la hora en el formato preferido y la gestión de los valores de fecha y hora.</p>
+  </ion-text>
+
+  <ion-card>
+      <ion-card-header>
+        <ion-card-title>uso basico</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-datetime></ion-datetime>
+      </ion-card-content>
+    </ion-card>
+
+  <ion-card>
+      <ion-card-header>
+        <ion-card-title>Selecion de mes y año</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-datetime presentation="month-year"></ion-datetime>
+      </ion-card-content>
+  </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Selecio de hora</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-datetime presentation="time"></ion-datetime>
+      </ion-card-content>
+    </ion-card>
+
+  <ion-button routerLink="/inicio" class="volver-btn">
+    Volver
+  </ion-button>
+</ion-content>

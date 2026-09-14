@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Pan rallado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+      <ion-text class="intro"> <p>
+     Las migas de pan son elementos de navegación que indican la ubicación del usuario en una aplicación o sitio web. Se recomienda su uso en sitios web y aplicaciones grandes con páginas organizadas jerárquicamente. Las migas de pan se pueden contraer según el número máximo que se muestre, y al hacer clic en el indicador de contracción se abre una ventana emergente con más información o se expanden las migas de pan contraídas. </p>
+  </ion-text>
+  <ion-card>
+      <ion-card-header>
+        <ion-card-title>uso basico</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-breadcrumbs>
+  <ion-breadcrumb href="#home">Home</ion-breadcrumb>
+  <ion-breadcrumb href="#electronics">Electronics</ion-breadcrumb>
+  <ion-breadcrumb href="#cameras">Cameras</ion-breadcrumb>
+  <ion-breadcrumb href="#film">Film</ion-breadcrumb>
+</ion-breadcrumbs>
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Elementos colapsables</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+      <ion-breadcrumbs [maxItems]="maxBreadcrumbs" (ionCollapsedClick)="expandBreadcrumbs()">
+  <ion-breadcrumb href="#home">Home</ion-breadcrumb>
+  <ion-breadcrumb href="#electronics">Electronics</ion-breadcrumb>
+  <ion-breadcrumb href="#photography">Photography</ion-breadcrumb>
+  <ion-breadcrumb href="#cameras">Cameras</ion-breadcrumb>
+  <ion-breadcrumb href="#film">Film</ion-breadcrumb>
+  <ion-breadcrumb href="#35mm">35 mm</ion-breadcrumb>
+</ion-breadcrumbs>
+      </ion-card-content>
+    </ion-card>
+
+  <ion-button routerLink="/inicio" class="volver-btn">
+    Volver
+  </ion-button>
+</ion-content>

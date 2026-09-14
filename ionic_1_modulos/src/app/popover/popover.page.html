@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Popover</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-text class="intro">
+    <p>
+     Un Popover es un cuadro de diálogo que aparece en la parte superior de la página actual. Puede utilizarse para cualquier cosa, pero generalmente se usa para acciones que no caben en la barra de navegación.
+
+Existen dos formas de usarlo ion-popover: en línea o a través de popoverController. Cada método tiene sus propias particularidades, así que asegúrese de usar el enfoque que mejor se adapte a su caso de uso.</p>
+  </ion-text>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Uso básico</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="uno">
+      <ion-button (click)="presentPopover($event)">Click </ion-button>
+<ion-popover #popover [isOpen]="isOpen" (didDismiss)="isOpen = false">
+  <ng-template>
+    <ion-content class="ion-padding">Hello World!</ion-content>
+  </ng-template>
+</ion-popover>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Alineacion a la derecha</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="container">
+        <ion-button id="right-end">click</ion-button>
+  <ion-popover class="popover" trigger="right-end" side="right" alignment="end">
+    <ng-template>
+      <ion-content class="ion-padding">Hello World!</ion-content>
+    </ng-template>
+  </ion-popover>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button routerLink="/inicio" class="volver-btn">
+    Volver
+  </ion-button>
+</ion-content>

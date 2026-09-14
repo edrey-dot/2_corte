@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Barra de busqueda</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+      <ion-text class="intro"> <p>
+      Las barras de búsqueda representan un campo de texto que permite buscar en una colección. Pueden mostrarse dentro de una barra de herramientas o en el contenido principal. Se recomienda usar una barra de búsqueda en lugar de un campo de entrada para buscar en listas. </p>
+  </ion-text>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Uso basico</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-searchbar
+          placeholder="¿En qué te puedo ayudar hoy?"
+        ></ion-searchbar>
+      </ion-card-content>
+    </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Boton de borrar</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-searchbar show-clear-button="always" clear-icon="trash-bin" value="Custom Clear Icon">
+      </ion-searchbar>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Tematizacion</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-searchbar color="primary" placeholder="Primary"></ion-searchbar>
+    </ion-card-content>
+  </ion-card>
+
+    <ion-card>
+    <ion-card-header>
+      <ion-card-title>Desenganche</ion-card-title>
+    </ion-card-header>
+      <ion-searchbar [debounce]="1000" (ionInput)="handleInput($event)"></ion-searchbar>
+
+      <ion-list>
+        @for (result of results; track result) {
+        <ion-item>
+          <ion-label>{{ result }}</ion-label>
+        </ion-item>
+        }
+      </ion-list>
+  </ion-card>
+
+<ion-button routerLink="/inicio" class="volver-btn">
+  Volver
+</ion-button>
+</ion-content>

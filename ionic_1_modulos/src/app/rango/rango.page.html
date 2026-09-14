@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Rango</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-text class="intro">
+    <p>
+     El control deslizante de rango permite a los usuarios seleccionar entre un rango de valores moviendo el mando deslizante. Por defecto, un mando controla el valor del rango. Este comportamiento se puede personalizar utilizando dos mandos .
+
+Por defecto, el control deslizante de rango tiene un valor mínimo de 0y un valor máximo de 100. Esto se puede configurar con las propiedades miny .max
+    </p>
+  </ion-text>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Uso básico</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-range aria-label="Volume"></ion-range>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Decoraciones</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-range aria-label="Temperature">
+  <ion-icon slot="start" name="snow-outline"></ion-icon>
+  <ion-icon slot="end" name="sunny-outline"></ion-icon>
+</ion-range>
+      
+    </ion-card-content>
+  </ion-card>
+
+   <ion-card>
+    <ion-card-header>
+      <ion-card-title>Chasquidos y garrapatas</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-range aria-label="Range with ticks" [ticks]="true" [snaps]="true" [min]="0" [max]="10"></ion-range>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button routerLink="/inicio" class="volver-btn">
+    Volver
+  </ion-button>
+</ion-content>
